@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Эволюция раскладки</title>
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/bootstrap-grid.min.css">
+	<style>
+		.progress {
+			border-top-color: #ff5714;
+			border-left-color: #ff5714;
+			border-bottom-color: #ff5714;
+		}
+
+		.slide .place.b {
+			height: calc(70% - 20px);
+			margin-bottom: 20px;
+		}
+
+		.slide .place.r {
+			margin-right: 20px;
+		}
+
+		.b-left,
+		.b-right {
+			height: 425px;
+			text-align: center;
+			color: #fff;
+			width: 50%;
+		}
+
+		.b-left {
+			background-color: #10893E;
+		}
+
+		.b-right {
+			background-color: #CA5010;
+		}
+
+		.flex {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
+
+		.grid h2 {
+			margin-bottom: 20px;
+		}
+
+		.img {
+			max-width: 100%;
+			max-height: 200px;
+			vertical-align: bottom;
+		}
+	</style>
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>Эволюция раскладки</h1>
+		<p>Николай Птущук</p>
+	</header>
+
+	<section class="slide" id="cover">
+		<h2>Эволюция раскладки</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Гриффины на булом фоне">
+		</figure>
+		<style>
+			#cover h2 {
+				color: #ff5714;
+				font-size: 70px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="html">
+		<h2>HTML для документов</h2>
+		<figure>
+			<img class="place b" src="pictures/html.gif" alt="Сменяющиеся документы">
+		</figure>
+	</section>
+
+	<section class="slide" id="blocks">
+		<h2>2 блока рядом</h2>
+		<figure>
+			<img class="place b" src="pictures/blocks.gif" alt="Питер Гриффин пытается закрыть жалюзи">
+		</figure>
+	</section>
+
+<!-- start table -->
+	<section class="slide" id="table">
+		<h2>Таблицы</h2>
+		<pre>
+			<code>&lt;table&gt;</code>
+			<code>	&lt;tr&gt;</code>
+			<code>		&lt;td&nbsp;width=&quot;50%&quot;&gt;&lt;/td&gt;</code>
+			<code>		&lt;td&nbsp;width=&quot;50%&quot;&gt;&lt;/td&gt;</code>
+			<code>	&lt;/tr&gt;</code>
+			<code>&lt;/table&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide grid" id="table-example">
+		<h2>Таблицы. Ожидание</h2>
+		<table>
+			<tr>
+				<td class="b-left" width="50%">
+					<div class="flex">
+						<span class="next">Надежный и работающий</span>
+					</div>
+				</td>
+				<td class="b-right" width="50%">
+					<div class="flex">
+						<span class="next">Раздутый html</span>
+						<span class="next">Проблема с переносом ячеек</span>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<style>
+			#table-example table {
+				margin-left: 0;
+				width: 100%;
+			}
+			#table-example td {
+				vertical-align: middle;
+				padding: 0;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="table-fail">
+		<h2>Таблицы. Действительность
+		</h2>
+		<figure>
+			<img class="place b" src="pictures/table.gif" alt="Стюи Гриффин в паранойе">
+		</figure>
+	</section>
+
+	<section class="slide" id="table-success">
+		<h2>Таблицы. Как использовать</h2>
+		<h2 class="shout shrink">НИКАК</h2>
+	</section>
+<!-- end table -->
+
+<!-- start area -->
+	<section class="slide" id="area">
+		<h2>Картинка + область</h2>
+		<pre>
+			<code>&lt;img src="…" alt="…" <mark>usemap="#Areamap"</mark>&gt;</code>
+  			<code class="next"><mark>&lt;map name="Areamap"&gt;</mark></code>
+  			<code class="next">	&lt;area shape="rect" coords="x1,y1,x2,y2" href="#"&gt;</code>
+  			<code class="next">	&lt;area shape="rect" coords="x1,y1,x2,y2" href="#"&gt;</code>
+  			<code class="next">&lt;/map&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide grid" id="area-example">
+		<h2>Картинка + область. Ожидание</h2>
+		<div>
+			<img class="img" src="pictures/area.png" alt="Картинка с блоками верстки" usemap="#Areamap">
+  			<map name="Areamap">
+  				<area shape="rect" coords="0,0,410,425" href="#lol">
+  				<area shape="rect" coords="410,0,820,425" href="#shto">
+  			</map>
+		</div>
+		<style>
+			#area-example .img {
+				max-height: 100%;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="area-fail">
+		<h2>Картинка + область. Действительность</h2>
+		<figure>
+			<img class="place b" src="pictures/area.gif" alt="Стюи Гриффин рассказывает страшную историю у костра">
+		</figure>
+	</section>
+
+	<section class="slide" id="area-success">
+		<h2>Картинка + область. Как использовать</h2>
+		<h2 class="shout shrink">НИКАК</h2>
+	</section>
+<!-- end area -->
+
+<!-- start position -->
+	<section class="slide" id="position">
+		<h2>Позиционирование</h2>
+		<pre>
+			<code>.left, .right {</code>
+			<code>	<mark>position: absolute;</mark></code>
+			<code>	width: 50%;</code>
+			<code>}</code>
+			<code>.left { <span class="next">left: 0;</span> }</code>
+			<code>.right { <span class="next">right: 0;</span> }</code>
+		</pre>
+	</section>
+
+	<section class="slide grid" id="position-example">
+		<h2>Позиционирование. Ожидание</h2>
+		<div>
+			<div class="b-left">
+				<div class="flex">
+					<span class="next">Антипример</span>
+				</div>
+			</div>
+			<div class="b-right">
+				<div class="flex">
+					<span class="next">Выпадение из потока</span>
+					<span class="next">Нет высоты</span>
+					<span class="next">Пересчёт координат</span>
+				</div>
+			</div>
+		</div>
+		<style>
+			#position-example > div {
+				position: relative;
+			}
+			#position-example .b-left,
+			#position-example .b-right {
+				position: absolute;
+			}
+			#position-example .b-left {
+				left: 0;
+			}
+			#position-example .b-right {
+				right: 0;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="position-fail">
+		<h2>Позиционирование. Действительность</h2>
+		<figure>
+			<img class="place b" src="pictures/position.gif" alt="Питер Гриффин спускается по лестнице">
+		</figure>
+	</section>
+
+	<section class="slide" id="position-success">
+		<h2>Позиционирование. Как использовать</h2>
+		<h2 class="shout shrink">НИКАК</h2>
+	</section>
+<!-- end position -->
+
+<!-- start float -->
+	<section class="slide" id="float">
+		<h2>Обтекание</h2>
+		<pre>
+			<code>.left, .right {</code>
+			<code>	width: 50%;</code>
+			<code>}</code>
+			<code>.left { <mark>float: left;</mark> }</code>
+			<code>.right { <mark>float: right;</mark> }</code>
+		</pre>
+	</section>
+
+	<section class="slide grid" id="float-example">
+		<h2>Обтекание. Ожидание</h2>
+		<div>
+			<div class="b-left">
+				<div class="flex">
+					<span class="next">Вариант для старых браузеров</span>
+				</div>
+			</div>
+			<div class="b-right">
+				<div class="flex">
+					<span class="next">Нет высоты родителя</span>
+					<span class="next">Перенос элементов</span>
+					<span class="next">Изменение потока</span>
+				</div>
+			</div>
+		</div>
+		<style>
+			#float-example > div {
+				display: flow-root;
+			}
+			#float-example .b-left {
+				float: left;
+			}
+			#float-example .b-right {
+				float: right;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="float-fail">
+		<h2>Обтекание. Действительность</h2>
+		<figure>
+			<img class="place b" src="pictures/float.jpg" alt="Джейк Такер">
+		</figure>
+	</section>
+
+	<section class="slide" id="float-success">
+		<h2>Обтекание. Как использовать</h2>
+		<ol>
+			<li class="next">Задать родителю высоту</li>
+			<li class="next">Задать родителю overflow: hidden</li>
+			<li class="next">После float использовать св-во clear</li>
+			<li class="next">Набор правил clearfix</li>
+			<li class="next">
+				<mark>display: flow-root</mark>
+				<img class="img place b r next" src="pictures/float-caniuse.png" alt="Поддержка браузерами свойства flow-root">
+			</li>
+		</ol>
+	</section>
+<!-- end float -->
+
+<!-- start inline -->
+	<section class="slide" id="inline">
+		<h2>Строчно-блочные</h2>
+		<pre>
+			<code>.left, .right {</code>
+			<code>	width: 50%;</code>
+			<code>	<mark>display: inline-block;</mark></code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide grid" id="inline-example">
+		<h2>Строчно-блочные. Ожидание</h2>
+		<div>
+			<div class="b-left">
+				<div class="flex">
+					<span class="next">Все браузеры поддерживают</span>
+					<span class="next">Общая высота строки</span>
+				</div>
+			</div><!--
+			--><div class="b-right">
+				<div class="flex">
+					<span class="next">Текстовая нода</span>
+				</div>
+			</div>
+		</div>
+		<style>
+			#inline-example .b-left,
+			#inline-example .b-right {
+				display: inline-block;
+				vertical-align: top;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="inline-fail">
+		<h2>Строчно-блочные. Действительность</h2>
+		<figure>
+			<img class="place b" src="pictures/inline.gif" alt="Питер и Брайан не могут занести бутерброд в дом">
+		</figure>
+	</section>
+
+	<section class="slide" id="inline-success">
+		<h2>Строчно-блочные. Как использовать</h2>
+		<ol>
+			<li class="next">Задать меньше ширину</li>
+			<li class="next">Отрицательный margin</li>
+			<li class="next">Убрать размер шрифта родителя</li>
+			<li class="next">Элементы в одну строку</li>
+			<li class="next">Закомментировать отступы</li>
+		</ol>
+	</section>
+<!-- end inline -->
+
+<!-- start bootstrap -->
+	<section class="slide" id="bootstrap">
+		<h2>CSS библиотеки</h2>
+		<pre>
+			<code>.left, .right {</code>
+			<code>	<mark>bootstrap: absolute;</mark></code>
+			<code>	width: 50%;</code>
+			<code>}</code>
+			<code>.left { <span class="next">left: 0;</span> }</code>
+			<code>.right { <span class="next">right: 0;</span> }</code>
+		</pre>
+	</section>
+
+	<section class="slide grid" id="bootstrap-example">
+		<h2>CSS библиотеки. Ожидание</h2>
+		<div>
+			<div class="row">
+    			<div class="col b-left">
+    				<div class="flex">
+						<span class="next">Можно не думать</span>
+					</div>
+				</div>
+    			<div class="col b-right">
+    				<div class="flex">
+						<span class="next">Можно не думать</span>
+					</div>
+    			</div>
+  			</div>
+		</div>
+		<style>
+		</style>
+	</section>
+
+	<section class="slide" id="bootstrap-fail">
+		<h2>CSS библиотеки. Действительность</h2>
+		<figure>
+			<img class="place b" src="pictures/bootstrap.gif" alt="Питер Гриффин забыл как сесть на кресло">
+		</figure>
+	</section>
+
+	<section class="slide" id="bootstrap-success">
+		<h2>CSS библиотеки. Как использовать</h2>
+		<ul>
+			<li class="next">если вы не фронтендер</li>
+			<li class="next">для прототипов</li>
+		</ul>
+	</section>
+<!-- end bootstrap -->
+
+<!-- start flex -->
+	<section class="slide" id="flex">
+		<h2>Флексбокс</h2>
+		<pre>
+			<code>.parent {</code>
+			<code>	<mark>display: flex;</mark></code>
+			<code>}</code>
+			<code>.left, .right {</code>
+			<code>	width: 50%;</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide grid" id="flex-example">
+		<h2>Флексбокс. Ожидание</h2>
+		<div class="flex">
+			<div class="b-left">
+				<div class="flex">
+					<span class="next">Большая вариативность</span>
+					<span class="next">
+						<img class="img" src="pictures/flex-caniuse.png" alt="Поддержка браузерами свойства flexbox">
+					</span>
+				</div>
+			</div>
+			<div class="b-right">
+				<div class="flex">
+					<span class="next">box, flexbox, flex</span>
+					<span class="next">Много новых свойств</span>
+				</div>
+			</div>
+		</div>
+		<style>
+			#flex-example > .flex {
+				flex-direction: row;
+				height: auto;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="flex-fail">
+		<h2>Флексбокс. Действительность</h2>
+		<figure>
+			<img class="place b" src="pictures/flex.gif" alt="Питер Гриффин танцует">
+		</figure>
+	</section>
+
+	<section class="slide" id="flex-success">
+		<h2>Флексбокс. Как использовать</h2>
+		<img class="img" src="pictures/flex-success.png" alt="Пересечение осей">
+		<ul class="double">
+			<li class="next">flex-direction</li>
+			<li class="next">flex-wrap</li>
+			<li class="next">justify-content</li>
+			<li class="next">align-items</li>
+			<li class="next">align-content</li>
+			<li class="next">align-self</li>
+			<li class="next">flex-grow</li>
+			<li class="next">flex-shrink</li>
+			<li class="next">order</li>
+		</ul>
+	</section>
+<!-- end flex -->
+
+<!-- start grid -->
+	<section class="slide" id="grid">
+		<h2>Гриды</h2>
+		<pre>
+			<code>.parent {</code>
+			<code>	<mark>display: grid;</mark></code>
+			<code>	grid-template-columns: 1fr 1fr;</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide grid" id="grid-example">
+		<h2>Гриды. Ожидание</h2>
+		<div class="grid">
+			<div class="b-left">
+				<div class="flex">
+					<span class="next">Очень большая вариативность</span>
+					<span class="next">
+						<img class="img" src="pictures/grid-caniuse.png" alt="Поддержка браузерами свойства grid">
+					</span>
+				</div>
+			</div>
+			<div class="b-right">
+				<div class="flex">
+					<span class="next">Очень много новых свойств</span>
+				</div>
+			</div>
+		</div>
+		<style>
+			#grid-example > .grid {
+				display: grid;
+  				grid-template-columns: 1fr 1fr;
+			}
+			#grid-example .b-left,
+			#grid-example .b-right {
+				width: 100%;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="grid-fail">
+		<h2>Гриды. Действительность</h2>
+		<figure>
+			<img class="place b" src="pictures/grid.gif" alt="Изменение головы Стюи">
+		</figure>
+	</section>
+
+	<section class="slide" id="grid-fail2">
+		<h2>Гриды. Действительность</h2>
+		<figure>
+			<img class="place b" src="pictures/grid2.gif" alt="Стюи радуется">
+		</figure>
+	</section>
+
+	<section class="slide" id="grid-success">
+		<h2>Гриды. Как использовать</h2>
+		<img class="place b" src="pictures/grid-success.jpg" alt="линии, полосы, ячейки, области">
+	</section>
+
+	<section class="slide" id="grid-success2">
+		<h2>Гриды. Как использовать</h2>
+		<ul class="double">
+			<li class="next">grid-template-columns: 1fr 150px</li>
+			<li class="next">grid-template-rows: 1fr 150px</li>
+			<li class="next">grid-column: 1/4</li>
+			<li class="next">grid-row: 2/3</li>
+			<li class="next">grid-column-gap: 20px</li>
+			<li class="next">grid-row-gap: 20px</li>
+			<li class="next">grid-area: 2/1/3/4</li>
+			<li class="next">grid-template-areas:<br>&nbsp;&nbsp;'h h h'<br>&nbsp;&nbsp;'m m a'<br>&nbsp;&nbsp;'f f f'</li>
+			<li class="next">grid-area: h</li>
+			<li class="next">justify-items, align-items, justify-content, align-content</li>
+		</ul>
+	</section>
+<!-- end grid -->
+
+	<section class="slide" id="fight">
+		<h2>Не согласны?</h2>
+		<figure>
+			<img class="place b" src="pictures/fight.gif" alt="Драка в баре">
+		</figure>
+	</section>
+
+	<section class="slide" id="bye">
+		<h2 class="white">Спасибо. Вопросы?</h2>
+		<figure>
+			<img class="cover h" src="pictures/bye.gif" alt="Питер Гриффин уплывает на корабле">
+		</figure>
+		<style>
+			.slide .white {
+				color: #fff;
+			}
+		</style>
+	</section>
+
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Powered by Shower</a>
+	</footer>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
